@@ -62,10 +62,10 @@ st.markdown(
         <div class="header-row">
             <div class="header-text">
                 <div class="header-name">Axel Stoltz</div>
-                <div class="header-title">Data Scientist Engineering Student</div>
+                <div class="header-title">Data Scientist / Engineering Student</div>
             </div>
             <div style="color:white; font-weight:800;" class="header-info">
-                📧 axel.stoltz@email.com | 
+                📧 axel.stoltz@efrei.net | 
                 🔗 <a style="text-decoration:none; color:white; font-weight:800;" href="https://www.linkedin.com/in/axel-stoltz/" target="_blank">LinkedIn</a> | 
                 📅 <a style="text-decoration:none; color:white; font-weight:800; margin-right:3%;" href="https://calendly.com/axel-stoltz-efrei/meet-me" target="_blank">Meet me</a>
             </div>
