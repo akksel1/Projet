@@ -254,7 +254,7 @@ elif st.session_state.selection  == "💻 Cool Projects":
 
         files = ['thu-10h.csv','thu-12h.csv','thu-16h.csv','thu-19h.csv','thu-22h.csv']
 
-        df_list = [pd.read_csv(f'data/thu-17/{file}', delimiter=';') for file in files]
+        df_list = [pd.read_csv(f'Data/thu-17/{file}', delimiter=';') for file in files]
         df_thursday = pd.concat(df_list, ignore_index=True)
         df_thursday = df_thursday.sort_values('stationcode')
         df_thursday.reset_index(drop=True, inplace=True)
@@ -299,123 +299,123 @@ elif st.session_state.selection  == "💻 Cool Projects":
 
         st.write(f"**{selected_feature.capitalize()}**: {feature_explanations[selected_feature]}")
 
-    st.header("Visualizations 📊")
+        st.header("Visualizations 📊")
 
-    visualization_options = [
-        "Top 10 Municipalities with the Most Stations",
-        "Bikes Distribution",
-        "Hourly Availability",
-        "Station Map",
-        "Station Density Map",
-        "Bikes Availability Map"
-    ]
+        visualization_options = [
+            "Top 10 Municipalities with the Most Stations",
+            "Bikes Distribution",
+            "Hourly Availability",
+            "Station Map",
+            "Station Density Map",
+            "Bikes Availability Map"
+        ]
 
-    selected_visualization = st.selectbox("Select a visualization:", visualization_options)
+        selected_visualization = st.selectbox("Select a visualization:", visualization_options)
 
-    if selected_visualization == "Top 10 Municipalities with the Most Stations":
-        st.subheader("Top 10 Municipalities with the Most Stations")
-        st.components.v1.html(open('top_cities_graph.html', 'r').read(), height=600)
-        st.subheader("Analysis")
-        st.write("""
-        This visualization highlights the top 10 municipalities with the highest number of bike-sharing stations. 
-        It helps identify areas with high bike-sharing infrastructure, which could correlate with greater usage or demand.
-        """)
+        if selected_visualization == "Top 10 Municipalities with the Most Stations":
+            st.subheader("Top 10 Municipalities with the Most Stations")
+            st.components.v1.html(open('top_cities_graph.html', 'r').read(), height=600)
+            st.subheader("Analysis")
+            st.write("""
+            This visualization highlights the top 10 municipalities with the highest number of bike-sharing stations. 
+            It helps identify areas with high bike-sharing infrastructure, which could correlate with greater usage or demand.
+            """)
 
-    elif selected_visualization == "Bikes Distribution":
-        st.subheader("Bikes Distribution")
-        st.components.v1.html(open('rate_bike.html', 'r').read(), height=600)
-        st.write("""
-        The Bikes Distribution visualization provides insight into how bikes are spread across different stations. 
-        Analyzing this distribution can help detect areas where there might be an imbalance in bike availability, 
-        either excess or scarcity, and optimize redistribution efforts.
-        """)
+        elif selected_visualization == "Bikes Distribution":
+            st.subheader("Bikes Distribution")
+            st.components.v1.html(open('rate_bike.html', 'r').read(), height=600)
+            st.write("""
+            The Bikes Distribution visualization provides insight into how bikes are spread across different stations. 
+            Analyzing this distribution can help detect areas where there might be an imbalance in bike availability, 
+            either excess or scarcity, and optimize redistribution efforts.
+            """)
 
-    elif selected_visualization == "Hourly Availability":
-        day_options = ["Thursday, October 18, 2024", "Friday, October 19, 2024", "Saturday, October 20, 2024"]
-        selected_day = st.radio("Select a day for hourly availability:", day_options)
+        elif selected_visualization == "Hourly Availability":
+            day_options = ["Thursday, October 18, 2024", "Friday, October 19, 2024", "Saturday, October 20, 2024"]
+            selected_day = st.radio("Select a day for hourly availability:", day_options)
 
-        if selected_day == "Thursday, October 18, 2024":
-            st.subheader("Hourly Availability on Thursday, October 18, 2024 (Rainy)")
-            st.components.v1.html(open('dispo_jeudi.html', 'r').read(), height=600)
-            
+            if selected_day == "Thursday, October 18, 2024":
+                st.subheader("Hourly Availability on Thursday, October 18, 2024 (Rainy)")
+                st.components.v1.html(open('dispo_jeudi.html', 'r').read(), height=600)
+                
 
-        elif selected_day == "Friday, October 19, 2024":
-            st.subheader("Hourly Availability on Friday, October 19, 2024 (Sunny/Cloudy)")
-            st.components.v1.html(open('dispo_vendredi.html', 'r').read(), height=600)
-            
+            elif selected_day == "Friday, October 19, 2024":
+                st.subheader("Hourly Availability on Friday, October 19, 2024 (Sunny/Cloudy)")
+                st.components.v1.html(open('dispo_vendredi.html', 'r').read(), height=600)
+                
 
-        elif selected_day == "Saturday, October 20, 2024":
-            st.subheader("Hourly Availability on Saturday, October 20, 2024 (Sunny)")
-            st.components.v1.html(open('dispo_samedi.html', 'r').read(), height=600)
+            elif selected_day == "Saturday, October 20, 2024":
+                st.subheader("Hourly Availability on Saturday, October 20, 2024 (Sunny)")
+                st.components.v1.html(open('dispo_samedi.html', 'r').read(), height=600)
 
-        st.subheader("Analysis")
-        st.write("""
-        This visualization shows the availability of bikes at different times throughout the selected day. 
-        It is useful for identifying patterns in bike availability across different hours, which can indicate peak times of usage 
-        or potential shortages during specific periods of the day.
-        """)
+            st.subheader("Analysis")
+            st.write("""
+            This visualization shows the availability of bikes at different times throughout the selected day. 
+            It is useful for identifying patterns in bike availability across different hours, which can indicate peak times of usage 
+            or potential shortages during specific periods of the day.
+            """)
 
-    elif selected_visualization == "Station Map":
-        st.subheader("Station Map")
-        with open('carte_stations_paris_cluster.html', 'r', encoding='utf-8') as f:
-            map_html = f.read()
-        st.components.v1.html(map_html, height=600)
-        st.subheader("Analysis")
-        st.write("""
-        The Station Map allows you to visually explore the locations of bike-sharing stations across the city. 
-        This can highlight areas with good coverage as well as potential gaps in the network, where adding new stations 
-        might improve accessibility.
-        """)
-
-    elif selected_visualization == "Station Density Map":
-        st.subheader("Station Density Map")
-        with open('carte_densite2.html', 'r', encoding='utf-8') as f:
-            map_html = f.read()
-        st.components.v1.html(map_html, height=600)
-        st.subheader("Analysis")
-        st.write("""
-        The Station Density Map focuses on the density of bike-sharing stations in different parts of the city. 
-        Areas with high density are often better served, while low-density areas may require additional infrastructure 
-        to meet potential demand.
-        """)
-
-    elif selected_visualization == "Bikes Availability Map":
-        st.subheader("Bikes Availability Map")
-
-        # Sélecteur de jour
-        day_options = ["Thursday", "Friday", "Saturday"]
-        selected_day = st.selectbox("Select a day:", day_options)
-
-        # Sélecteur de plage horaire
-        if selected_day == "Thursday":
-            time_labels = ['8-12h', '12-16h', '16-20h', '20-24h']
-        else:
-            time_labels = ['1-8h', '8-10h', '10-12h', '12-17h', '17-20h', '20-24']
-
-        selected_time_range = st.selectbox("Select a time range:", time_labels)
-
-        if selected_day == "Thursday":
-            file_name = f'carte_interactive_thu_{selected_time_range}.html'
-        elif selected_day == "Friday":
-            file_name = f'carte_interactive_fri_{selected_time_range}.html'
-        else:  
-            file_name = f'carte_interactive_sat_{selected_time_range}.html'
-
-        try:
-            with open(file_name, 'r', encoding='utf-8') as f:
+        elif selected_visualization == "Station Map":
+            st.subheader("Station Map")
+            with open('carte_stations_paris_cluster.html', 'r', encoding='utf-8') as f:
                 map_html = f.read()
             st.components.v1.html(map_html, height=600)
-        except FileNotFoundError:
-            st.error("The selected map is not available.")
-       
-        st.subheader("Analysis")
-        st.write("""
-        The Bikes Availability Map shows the number of bikes available at each station during the selected time range.
-        It helps to understand how bike availability fluctuates over time and across locations, providing insights for 
-        resource allocation and user behavior patterns.
-        """)
+            st.subheader("Analysis")
+            st.write("""
+            The Station Map allows you to visually explore the locations of bike-sharing stations across the city. 
+            This can highlight areas with good coverage as well as potential gaps in the network, where adding new stations 
+            might improve accessibility.
+            """)
+
+        elif selected_visualization == "Station Density Map":
+            st.subheader("Station Density Map")
+            with open('carte_densite2.html', 'r', encoding='utf-8') as f:
+                map_html = f.read()
+            st.components.v1.html(map_html, height=600)
+            st.subheader("Analysis")
+            st.write("""
+            The Station Density Map focuses on the density of bike-sharing stations in different parts of the city. 
+            Areas with high density are often better served, while low-density areas may require additional infrastructure 
+            to meet potential demand.
+            """)
+
+        elif selected_visualization == "Bikes Availability Map":
+            st.subheader("Bikes Availability Map")
+
+            # Sélecteur de jour
+            day_options = ["Thursday", "Friday", "Saturday"]
+            selected_day = st.selectbox("Select a day:", day_options)
+
+            # Sélecteur de plage horaire
+            if selected_day == "Thursday":
+                time_labels = ['8-12h', '12-16h', '16-20h', '20-24h']
+            else:
+                time_labels = ['1-8h', '8-10h', '10-12h', '12-17h', '17-20h', '20-24']
+
+            selected_time_range = st.selectbox("Select a time range:", time_labels)
+
+            if selected_day == "Thursday":
+                file_name = f'carte_interactive_thu_{selected_time_range}.html'
+            elif selected_day == "Friday":
+                file_name = f'carte_interactive_fri_{selected_time_range}.html'
+            else:  
+                file_name = f'carte_interactive_sat_{selected_time_range}.html'
+
+            try:
+                with open(file_name, 'r', encoding='utf-8') as f:
+                    map_html = f.read()
+                st.components.v1.html(map_html, height=600)
+            except FileNotFoundError:
+                st.error("The selected map is not available.")
         
+            st.subheader("Analysis")
+            st.write("""
+            The Bikes Availability Map shows the number of bikes available at each station during the selected time range.
+            It helps to understand how bike availability fluctuates over time and across locations, providing insights for 
+            resource allocation and user behavior patterns.
+            """)
             
+                
 
 
 
