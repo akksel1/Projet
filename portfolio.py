@@ -101,7 +101,7 @@ st.markdown(
 
 
 if 'selection' not in st.session_state:
-    st.session_state.selection = "📰 Fresh News"  
+    st.session_state.selection = "💻 Cool Projects"  
 
 col1, col2, col3, col4, col5 = st.columns([1, 1, 1, 1, 3])
 
