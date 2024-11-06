@@ -438,7 +438,7 @@ elif st.session_state.selection == "📰 Fresh News":
     st.header("News 🌍")
     st.markdown(
         """
-        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7259949030066077696" height="1572" width="504" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
+        <iframe src="https://www.linkedin.com/embed/feed/update/urn:li:ugcPost:7259949030066077696" height="1425" width="1000" frameborder="0" allowfullscreen="" title="Post intégré"></iframe>
         """,
         unsafe_allow_html=True
     )
