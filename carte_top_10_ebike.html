@@ -1,0 +1,893 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    
+        <script>
+            L_NO_TOUCH = false;
+            L_DISABLE_3D = false;
+        </script>
+    
+    <style>html, body {width: 100%;height: 100%;margin: 0;padding: 0;}</style>
+    <style>#map {position:absolute;top:0;bottom:0;right:0;left:0;}</style>
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_33fccdf7c0145ef4eb8aa8c42c3eb9f9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+        
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/leaflet.markercluster.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/leaflet.markercluster/1.1.0/MarkerCluster.Default.css"/>
+</head>
+<body>
+    
+    
+            <div class="folium-map" id="map_33fccdf7c0145ef4eb8aa8c42c3eb9f9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_33fccdf7c0145ef4eb8aa8c42c3eb9f9 = L.map(
+                "map_33fccdf7c0145ef4eb8aa8c42c3eb9f9",
+                {
+                    center: [48.8566, 2.3522],
+                    crs: L.CRS.EPSG3857,
+                    zoom: 12,
+                    zoomControl: true,
+                    preferCanvas: false,
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_db3127a760889c603ff570bcdbb6e227 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {"attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors", "detectRetina": false, "maxNativeZoom": 19, "maxZoom": 19, "minZoom": 0, "noWrap": false, "opacity": 1, "subdomains": "abc", "tms": false}
+            );
+        
+    
+            tile_layer_db3127a760889c603ff570bcdbb6e227.addTo(map_33fccdf7c0145ef4eb8aa8c42c3eb9f9);
+        
+    
+            var marker_cluster_4798d7caed50211cf25a4d3a5241d4ae = L.markerClusterGroup(
+                {}
+            );
+        
+    
+            var marker_2e5240c4386dde243fded78c52a3ff34 = L.marker(
+                [48.86746195408435, 2.405970990657807],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_e06726aa90560e7ec9b2800decad047c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_2e5240c4386dde243fded78c52a3ff34.setIcon(icon_e06726aa90560e7ec9b2800decad047c);
+        
+    
+        var popup_834858f8eb5687525a74d0a69cbd6ee1 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b582e0d4476f3a173b41573af4acec1a = $(`<div id="html_b582e0d4476f3a173b41573af4acec1a" style="width: 100.0%; height: 100.0%;">Lieutenant Chauré - Etienne Marey</div>`)[0];
+                popup_834858f8eb5687525a74d0a69cbd6ee1.setContent(html_b582e0d4476f3a173b41573af4acec1a);
+            
+        
+
+        marker_2e5240c4386dde243fded78c52a3ff34.bindPopup(popup_834858f8eb5687525a74d0a69cbd6ee1)
+        ;
+
+        
+    
+    
+            var marker_f90185b62d74824f794a35f53b5c6337 = L.marker(
+                [48.821443218278, 2.2150785306885],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_02ec8a3833dc098e98fae56e1fc2d97b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f90185b62d74824f794a35f53b5c6337.setIcon(icon_02ec8a3833dc098e98fae56e1fc2d97b);
+        
+    
+        var popup_5a1693f8336e3c218f0a8c3eacb1a2cc = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8379a72ce58f4e5245b800eb4b77a436 = $(`<div id="html_8379a72ce58f4e5245b800eb4b77a436" style="width: 100.0%; height: 100.0%;">Sèvres Rive Gauche</div>`)[0];
+                popup_5a1693f8336e3c218f0a8c3eacb1a2cc.setContent(html_8379a72ce58f4e5245b800eb4b77a436);
+            
+        
+
+        marker_f90185b62d74824f794a35f53b5c6337.bindPopup(popup_5a1693f8336e3c218f0a8c3eacb1a2cc)
+        ;
+
+        
+    
+    
+            var marker_e15035da3656369aa570e4008ca939b5 = L.marker(
+                [48.8755044846, 2.3890327325519],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_9d667b2f6cca20f234fec53322ce94bb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e15035da3656369aa570e4008ca939b5.setIcon(icon_9d667b2f6cca20f234fec53322ce94bb);
+        
+    
+        var popup_7e8f3106c625405d9135c3a12c824d17 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_01ba5d6847fdba58c99d063c310d67cb = $(`<div id="html_01ba5d6847fdba58c99d063c310d67cb" style="width: 100.0%; height: 100.0%;">Lassus - Delouvain</div>`)[0];
+                popup_7e8f3106c625405d9135c3a12c824d17.setContent(html_01ba5d6847fdba58c99d063c310d67cb);
+            
+        
+
+        marker_e15035da3656369aa570e4008ca939b5.bindPopup(popup_7e8f3106c625405d9135c3a12c824d17)
+        ;
+
+        
+    
+    
+            var marker_fbfd4b18b275dd9fa01c40418ef4a3cd = L.marker(
+                [48.8691543609174, 2.40932246879487],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_3e8c51f8a30db7b7e00c18c6bde8bde0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_fbfd4b18b275dd9fa01c40418ef4a3cd.setIcon(icon_3e8c51f8a30db7b7e00c18c6bde8bde0);
+        
+    
+        var popup_6ef19781823a3574dea798a2499607e4 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e4a3eedb7d0d1bc82d3a1541e82d4c8f = $(`<div id="html_e4a3eedb7d0d1bc82d3a1541e82d4c8f" style="width: 100.0%; height: 100.0%;">Porte de Ménilmontant</div>`)[0];
+                popup_6ef19781823a3574dea798a2499607e4.setContent(html_e4a3eedb7d0d1bc82d3a1541e82d4c8f);
+            
+        
+
+        marker_fbfd4b18b275dd9fa01c40418ef4a3cd.bindPopup(popup_6ef19781823a3574dea798a2499607e4)
+        ;
+
+        
+    
+    
+            var marker_b83c7de7d5fb6cd71698704a3e550b8b = L.marker(
+                [48.87660391892763, 2.404769691129476],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_da3c38ee98d5c488e7158d4824d22031 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_b83c7de7d5fb6cd71698704a3e550b8b.setIcon(icon_da3c38ee98d5c488e7158d4824d22031);
+        
+    
+        var popup_e1d23767a265fc09c9437ec860b28066 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4f83d050e66f28b754c2a33b830e74d6 = $(`<div id="html_4f83d050e66f28b754c2a33b830e74d6" style="width: 100.0%; height: 100.0%;">Belleville - Porte des Lilas</div>`)[0];
+                popup_e1d23767a265fc09c9437ec860b28066.setContent(html_4f83d050e66f28b754c2a33b830e74d6);
+            
+        
+
+        marker_b83c7de7d5fb6cd71698704a3e550b8b.bindPopup(popup_e1d23767a265fc09c9437ec860b28066)
+        ;
+
+        
+    
+    
+            var marker_52a00bc2f02801871cd289901b75fbb1 = L.marker(
+                [48.838634069623, 2.1724102640451],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_0325063e21782958cf23f01fc5957cde = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_52a00bc2f02801871cd289901b75fbb1.setIcon(icon_0325063e21782958cf23f01fc5957cde);
+        
+    
+        var popup_30fa337b9ba653cacb90014dad284666 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_2e104fb4c09ec13dfdbe7e06a6298577 = $(`<div id="html_2e104fb4c09ec13dfdbe7e06a6298577" style="width: 100.0%; height: 100.0%;">Raymond Poincaré - Allée de la Marche</div>`)[0];
+                popup_30fa337b9ba653cacb90014dad284666.setContent(html_2e104fb4c09ec13dfdbe7e06a6298577);
+            
+        
+
+        marker_52a00bc2f02801871cd289901b75fbb1.bindPopup(popup_30fa337b9ba653cacb90014dad284666)
+        ;
+
+        
+    
+    
+            var marker_22ed9806c33b69800e1107b09fee058f = L.marker(
+                [48.784527937293184, 2.3646667979455587],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_d2bbe160b3f44f1b0c8de6c074895e02 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_22ed9806c33b69800e1107b09fee058f.setIcon(icon_d2bbe160b3f44f1b0c8de6c074895e02);
+        
+    
+        var popup_e1abbad55f3159bcc56d2c96503329bd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_5840c7af58df65c49c7fe0190ac9da1a = $(`<div id="html_5840c7af58df65c49c7fe0190ac9da1a" style="width: 100.0%; height: 100.0%;">Karl Marx</div>`)[0];
+                popup_e1abbad55f3159bcc56d2c96503329bd.setContent(html_5840c7af58df65c49c7fe0190ac9da1a);
+            
+        
+
+        marker_22ed9806c33b69800e1107b09fee058f.bindPopup(popup_e1abbad55f3159bcc56d2c96503329bd)
+        ;
+
+        
+    
+    
+            var marker_9fdfffad67051d099cd0b0a6a99a2a85 = L.marker(
+                [48.862453313908, 2.1961666225454],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_0c9afb246e43a4a78f91b8064234c19e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_9fdfffad67051d099cd0b0a6a99a2a85.setIcon(icon_0c9afb246e43a4a78f91b8064234c19e);
+        
+    
+        var popup_b6d31b79541296d1c37e0bb8e728a4a8 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_dd21525fac80f6d796e888e018a8096a = $(`<div id="html_dd21525fac80f6d796e888e018a8096a" style="width: 100.0%; height: 100.0%;">Place Nelson Mandela</div>`)[0];
+                popup_b6d31b79541296d1c37e0bb8e728a4a8.setContent(html_dd21525fac80f6d796e888e018a8096a);
+            
+        
+
+        marker_9fdfffad67051d099cd0b0a6a99a2a85.bindPopup(popup_b6d31b79541296d1c37e0bb8e728a4a8)
+        ;
+
+        
+    
+    
+            var marker_8f41f5c9770c63cb7924c074dcbd69a4 = L.marker(
+                [48.800123, 2.3567359],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_3d3b3d5581f53dc27bf74ffc8542831e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_8f41f5c9770c63cb7924c074dcbd69a4.setIcon(icon_3d3b3d5581f53dc27bf74ffc8542831e);
+        
+    
+        var popup_72a2f85612ce13f6c3d1fabf1ebaddcd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_45ba2095efa9bc0777728c387531bbb8 = $(`<div id="html_45ba2095efa9bc0777728c387531bbb8" style="width: 100.0%; height: 100.0%;">Chastenet de Géry - Marcel Paul</div>`)[0];
+                popup_72a2f85612ce13f6c3d1fabf1ebaddcd.setContent(html_45ba2095efa9bc0777728c387531bbb8);
+            
+        
+
+        marker_8f41f5c9770c63cb7924c074dcbd69a4.bindPopup(popup_72a2f85612ce13f6c3d1fabf1ebaddcd)
+        ;
+
+        
+    
+    
+            var marker_ec27511e6f6795a2dc8c0ff07319d1b2 = L.marker(
+                [48.876601, 2.391769],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_3b2e73bcf5927d897ecbe095f01c5ceb = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ec27511e6f6795a2dc8c0ff07319d1b2.setIcon(icon_3b2e73bcf5927d897ecbe095f01c5ceb);
+        
+    
+        var popup_668f8d164f0f475f2097dc780fe9d4cd = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_35308cfc42a058010e9f9bb04fa90247 = $(`<div id="html_35308cfc42a058010e9f9bb04fa90247" style="width: 100.0%; height: 100.0%;">Solitaires - Place des Fêtes</div>`)[0];
+                popup_668f8d164f0f475f2097dc780fe9d4cd.setContent(html_35308cfc42a058010e9f9bb04fa90247);
+            
+        
+
+        marker_ec27511e6f6795a2dc8c0ff07319d1b2.bindPopup(popup_668f8d164f0f475f2097dc780fe9d4cd)
+        ;
+
+        
+    
+    
+            var marker_d76dab4ff2224131d4125660a9bb1eb1 = L.marker(
+                [48.885109, 2.435679],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_469376861447c848aea8fda570c92cf2 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d76dab4ff2224131d4125660a9bb1eb1.setIcon(icon_469376861447c848aea8fda570c92cf2);
+        
+    
+        var popup_4b99c23494e926c5a3ea74cc11d134f6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_01022dfa8d2c9ac1f3ba854e39b27168 = $(`<div id="html_01022dfa8d2c9ac1f3ba854e39b27168" style="width: 100.0%; height: 100.0%;">Mairie de Romainville</div>`)[0];
+                popup_4b99c23494e926c5a3ea74cc11d134f6.setContent(html_01022dfa8d2c9ac1f3ba854e39b27168);
+            
+        
+
+        marker_d76dab4ff2224131d4125660a9bb1eb1.bindPopup(popup_4b99c23494e926c5a3ea74cc11d134f6)
+        ;
+
+        
+    
+    
+            var marker_d2a1bcfc9a3b87d18b3e3267d3a5b1fc = L.marker(
+                [48.78266870733145, 2.381317801773548],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_38b3b90f07a759f2f4c52b0299d55867 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d2a1bcfc9a3b87d18b3e3267d3a5b1fc.setIcon(icon_38b3b90f07a759f2f4c52b0299d55867);
+        
+    
+        var popup_7aa5cadd1c9c1620dd7b7ab66ac89bd2 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_0134ef1658b60fe5f692e97256bb6370 = $(`<div id="html_0134ef1658b60fe5f692e97256bb6370" style="width: 100.0%; height: 100.0%;">Lebrun - Colonel Fabien</div>`)[0];
+                popup_7aa5cadd1c9c1620dd7b7ab66ac89bd2.setContent(html_0134ef1658b60fe5f692e97256bb6370);
+            
+        
+
+        marker_d2a1bcfc9a3b87d18b3e3267d3a5b1fc.bindPopup(popup_7aa5cadd1c9c1620dd7b7ab66ac89bd2)
+        ;
+
+        
+    
+    
+            var marker_e54e5c83b4366641222425799ebab879 = L.marker(
+                [48.880493403246, 2.398064173758],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_4221b9f9754b3bb1c8aca47c84e0cb8b = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e54e5c83b4366641222425799ebab879.setIcon(icon_4221b9f9754b3bb1c8aca47c84e0cb8b);
+        
+    
+        var popup_9fa591a88b1444cf1d87eb426f8c33be = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_b2be8bfbe83f2baff745f7178072f7d5 = $(`<div id="html_b2be8bfbe83f2baff745f7178072f7d5" style="width: 100.0%; height: 100.0%;">Serrurier</div>`)[0];
+                popup_9fa591a88b1444cf1d87eb426f8c33be.setContent(html_b2be8bfbe83f2baff745f7178072f7d5);
+            
+        
+
+        marker_e54e5c83b4366641222425799ebab879.bindPopup(popup_9fa591a88b1444cf1d87eb426f8c33be)
+        ;
+
+        
+    
+    
+            var marker_ee6e84f5c27f541520dc290a4f2f1c13 = L.marker(
+                [48.8736824, 2.3960278],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_2add0c1b6bd1eb13a0cdc6b378410dde = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_ee6e84f5c27f541520dc290a4f2f1c13.setIcon(icon_2add0c1b6bd1eb13a0cdc6b378410dde);
+        
+    
+        var popup_93d59def77e75c35ec00212cb2f07c5c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_4a6d3bf987e2201c2a3bb781f90c8fe3 = $(`<div id="html_4a6d3bf987e2201c2a3bb781f90c8fe3" style="width: 100.0%; height: 100.0%;">Square de la rue Pixérécourt</div>`)[0];
+                popup_93d59def77e75c35ec00212cb2f07c5c.setContent(html_4a6d3bf987e2201c2a3bb781f90c8fe3);
+            
+        
+
+        marker_ee6e84f5c27f541520dc290a4f2f1c13.bindPopup(popup_93d59def77e75c35ec00212cb2f07c5c)
+        ;
+
+        
+    
+    
+            var marker_506d21ec313cb6fe6b47be62b1b257e7 = L.marker(
+                [48.88526123395252, 2.334559857845307],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_4ba4ef2f40de45b5baa2d2ed609801da = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_506d21ec313cb6fe6b47be62b1b257e7.setIcon(icon_4ba4ef2f40de45b5baa2d2ed609801da);
+        
+    
+        var popup_ebec56d50b7ed550f58b313958f3ba7a = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_f0d8fedd1c7b676c32e22fdf839cc940 = $(`<div id="html_f0d8fedd1c7b676c32e22fdf839cc940" style="width: 100.0%; height: 100.0%;">Véron - Lepic</div>`)[0];
+                popup_ebec56d50b7ed550f58b313958f3ba7a.setContent(html_f0d8fedd1c7b676c32e22fdf839cc940);
+            
+        
+
+        marker_506d21ec313cb6fe6b47be62b1b257e7.bindPopup(popup_ebec56d50b7ed550f58b313958f3ba7a)
+        ;
+
+        
+    
+    
+            var marker_557c1f69766e83f93035fc9bfa6a3a9a = L.marker(
+                [48.87330497045532, 2.4014145880937576],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_095e784bb86c0741ce0f8151fe7b901d = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_557c1f69766e83f93035fc9bfa6a3a9a.setIcon(icon_095e784bb86c0741ce0f8151fe7b901d);
+        
+    
+        var popup_f848917bf21ea32c6a6244c7b3b9fd48 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8516e1fe6974e017891e22d0d2138cfb = $(`<div id="html_8516e1fe6974e017891e22d0d2138cfb" style="width: 100.0%; height: 100.0%;">Borrégo - Gambetta</div>`)[0];
+                popup_f848917bf21ea32c6a6244c7b3b9fd48.setContent(html_8516e1fe6974e017891e22d0d2138cfb);
+            
+        
+
+        marker_557c1f69766e83f93035fc9bfa6a3a9a.bindPopup(popup_f848917bf21ea32c6a6244c7b3b9fd48)
+        ;
+
+        
+    
+    
+            var marker_426c60da029eb13f523dfab33f36ea2b = L.marker(
+                [48.8687591, 2.4329931],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_45a52ac4da10655afe0bb011b9cd391e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_426c60da029eb13f523dfab33f36ea2b.setIcon(icon_45a52ac4da10655afe0bb011b9cd391e);
+        
+    
+        var popup_c4039100b2230dc59f4181d928351f57 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_194c4add120b89f5ab318f0835f927f6 = $(`<div id="html_194c4add120b89f5ab318f0835f927f6" style="width: 100.0%; height: 100.0%;">Place Du Général De Gaulle</div>`)[0];
+                popup_c4039100b2230dc59f4181d928351f57.setContent(html_194c4add120b89f5ab318f0835f927f6);
+            
+        
+
+        marker_426c60da029eb13f523dfab33f36ea2b.bindPopup(popup_c4039100b2230dc59f4181d928351f57)
+        ;
+
+        
+    
+    
+            var marker_95ffd9dc275e752f468b82928e834766 = L.marker(
+                [48.867362, 2.396222],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_fa1a26c179cddf61e44e3373ceb3ce93 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_95ffd9dc275e752f468b82928e834766.setIcon(icon_fa1a26c179cddf61e44e3373ceb3ce93);
+        
+    
+        var popup_1989ef663bdcd0948e49beaa68c1468b = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_869ae01489b9c8c8fb84b67f9e872d14 = $(`<div id="html_869ae01489b9c8c8fb84b67f9e872d14" style="width: 100.0%; height: 100.0%;">Villiers de l'Isle Adam - Pyrénées</div>`)[0];
+                popup_1989ef663bdcd0948e49beaa68c1468b.setContent(html_869ae01489b9c8c8fb84b67f9e872d14);
+            
+        
+
+        marker_95ffd9dc275e752f468b82928e834766.bindPopup(popup_1989ef663bdcd0948e49beaa68c1468b)
+        ;
+
+        
+    
+    
+            var marker_3463882cca9558010beabb26deac47a8 = L.marker(
+                [48.875089888322, 2.3826304078102],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_78eb9e1739b0f40bbe78d41e44d2bbc8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_3463882cca9558010beabb26deac47a8.setIcon(icon_78eb9e1739b0f40bbe78d41e44d2bbc8);
+        
+    
+        var popup_de80dd32ee1e93b290525d10b7c273ba = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_feb903bdc7f437121f4a414017b67bde = $(`<div id="html_feb903bdc7f437121f4a414017b67bde" style="width: 100.0%; height: 100.0%;">Square Simon Bolivar</div>`)[0];
+                popup_de80dd32ee1e93b290525d10b7c273ba.setContent(html_feb903bdc7f437121f4a414017b67bde);
+            
+        
+
+        marker_3463882cca9558010beabb26deac47a8.bindPopup(popup_de80dd32ee1e93b290525d10b7c273ba)
+        ;
+
+        
+    
+    
+            var marker_8d00849169bad2cb615a5af4824e1fc5 = L.marker(
+                [48.88192765861766, 2.392586767673493],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_ef024bc5a5c5618dc6e6474e5a55c05e = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_8d00849169bad2cb615a5af4824e1fc5.setIcon(icon_ef024bc5a5c5618dc6e6474e5a55c05e);
+        
+    
+        var popup_ce2368859ecad015a20ca580b612d938 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_95370210cfda47c32a9c6d622aaadb5b = $(`<div id="html_95370210cfda47c32a9c6d622aaadb5b" style="width: 100.0%; height: 100.0%;">Place de Rhin et Danube</div>`)[0];
+                popup_ce2368859ecad015a20ca580b612d938.setContent(html_95370210cfda47c32a9c6d622aaadb5b);
+            
+        
+
+        marker_8d00849169bad2cb615a5af4824e1fc5.bindPopup(popup_ce2368859ecad015a20ca580b612d938)
+        ;
+
+        
+    
+    
+            var marker_d039f8834411ea6460cd8179f7886828 = L.marker(
+                [48.792862, 2.363093],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_70b88931150a2b73bc94b2aeb526a766 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_d039f8834411ea6460cd8179f7886828.setIcon(icon_70b88931150a2b73bc94b2aeb526a766);
+        
+    
+        var popup_f755d90d944b29fcbd4bcdd3eb6b90e6 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_cf9b85acd76ea68a6ca9e02d576ec80a = $(`<div id="html_cf9b85acd76ea68a6ca9e02d576ec80a" style="width: 100.0%; height: 100.0%;">Eugène Varlin - Place de la Paix</div>`)[0];
+                popup_f755d90d944b29fcbd4bcdd3eb6b90e6.setContent(html_cf9b85acd76ea68a6ca9e02d576ec80a);
+            
+        
+
+        marker_d039f8834411ea6460cd8179f7886828.bindPopup(popup_f755d90d944b29fcbd4bcdd3eb6b90e6)
+        ;
+
+        
+    
+    
+            var marker_508ae30986093472ca70cf196e37b9cd = L.marker(
+                [48.8799933, 2.2072437],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_90ea6f8a6d666a29e8895e2fca332162 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_508ae30986093472ca70cf196e37b9cd.setIcon(icon_90ea6f8a6d666a29e8895e2fca332162);
+        
+    
+        var popup_e5da342144e464cfff1af6ac3edb8587 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_9f98d3bd7d57cd8a31129f99c21d7258 = $(`<div id="html_9f98d3bd7d57cd8a31129f99c21d7258" style="width: 100.0%; height: 100.0%;">Mairie de quartier du Plateau - Mont-Valérien</div>`)[0];
+                popup_e5da342144e464cfff1af6ac3edb8587.setContent(html_9f98d3bd7d57cd8a31129f99c21d7258);
+            
+        
+
+        marker_508ae30986093472ca70cf196e37b9cd.bindPopup(popup_e5da342144e464cfff1af6ac3edb8587)
+        ;
+
+        
+    
+    
+            var marker_e772169e84fd7fef491f2a599795b4af = L.marker(
+                [48.87195626635528, 2.384981390278095],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_a8b080cd9745b753ea46e400a9a286bf = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_e772169e84fd7fef491f2a599795b4af.setIcon(icon_a8b080cd9745b753ea46e400a9a286bf);
+        
+    
+        var popup_0b62257c284331716f6e761365e7b069 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_761e9860f061f991832104192526f9c0 = $(`<div id="html_761e9860f061f991832104192526f9c0" style="width: 100.0%; height: 100.0%;">Piat - Parc de Belleville</div>`)[0];
+                popup_0b62257c284331716f6e761365e7b069.setContent(html_761e9860f061f991832104192526f9c0);
+            
+        
+
+        marker_e772169e84fd7fef491f2a599795b4af.bindPopup(popup_0b62257c284331716f6e761365e7b069)
+        ;
+
+        
+    
+    
+            var marker_71c9f16f389d53e139e1c91fe767db93 = L.marker(
+                [48.8835462, 2.4137883],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_65787604f9cf93ff2e119b9e1f257bc8 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_71c9f16f389d53e139e1c91fe767db93.setIcon(icon_65787604f9cf93ff2e119b9e1f257bc8);
+        
+    
+        var popup_2bb39b5a54f702c7f233089c35e7e39c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_eab72f2134c65b66ec5fe0b399aa2c58 = $(`<div id="html_eab72f2134c65b66ec5fe0b399aa2c58" style="width: 100.0%; height: 100.0%;">Marcelle - Thalie</div>`)[0];
+                popup_2bb39b5a54f702c7f233089c35e7e39c.setContent(html_eab72f2134c65b66ec5fe0b399aa2c58);
+            
+        
+
+        marker_71c9f16f389d53e139e1c91fe767db93.bindPopup(popup_2bb39b5a54f702c7f233089c35e7e39c)
+        ;
+
+        
+    
+    
+            var marker_70a4a275a60e86e04ab830da7ada9560 = L.marker(
+                [48.817699773925, 2.2609312087297],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_4f7887acc032d086588e7f4d2b04390c = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_70a4a275a60e86e04ab830da7ada9560.setIcon(icon_4f7887acc032d086588e7f4d2b04390c);
+        
+    
+        var popup_002d0cac807f36f61e3c1ddd8a16224c = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_25f02f58905a29c9c757fef967e913a6 = $(`<div id="html_25f02f58905a29c9c757fef967e913a6" style="width: 100.0%; height: 100.0%;">Cimetière d'Issy-les-Moulineaux</div>`)[0];
+                popup_002d0cac807f36f61e3c1ddd8a16224c.setContent(html_25f02f58905a29c9c757fef967e913a6);
+            
+        
+
+        marker_70a4a275a60e86e04ab830da7ada9560.bindPopup(popup_002d0cac807f36f61e3c1ddd8a16224c)
+        ;
+
+        
+    
+    
+            var marker_5bec227d5bc9806705a4d2517df19f72 = L.marker(
+                [48.84949749106274, 2.4750164151191716],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_12e8435d3dcabf106714c9e9714dc9e0 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_5bec227d5bc9806705a4d2517df19f72.setIcon(icon_12e8435d3dcabf106714c9e9714dc9e0);
+        
+    
+        var popup_6bc8171d7857f2b3aeeb4df249746367 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_8ee4ce100007116524854d36ee987f6b = $(`<div id="html_8ee4ce100007116524854d36ee987f6b" style="width: 100.0%; height: 100.0%;">Hôtel de ville de Fontenay-sous-Bois</div>`)[0];
+                popup_6bc8171d7857f2b3aeeb4df249746367.setContent(html_8ee4ce100007116524854d36ee987f6b);
+            
+        
+
+        marker_5bec227d5bc9806705a4d2517df19f72.bindPopup(popup_6bc8171d7857f2b3aeeb4df249746367)
+        ;
+
+        
+    
+    
+            var marker_12c07c0f6db2c4047026878d948841c4 = L.marker(
+                [48.865217631011, 2.3936596512794],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_fc5aa21d29de659973f219b54d45d774 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_12c07c0f6db2c4047026878d948841c4.setIcon(icon_fc5aa21d29de659973f219b54d45d774);
+        
+    
+        var popup_ffae7fbf6b54827a0eec44478796f46f = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_d341fd93fbf43897c0c6ba9390681614 = $(`<div id="html_d341fd93fbf43897c0c6ba9390681614" style="width: 100.0%; height: 100.0%;">Sorbier - Gasnier-Guy</div>`)[0];
+                popup_ffae7fbf6b54827a0eec44478796f46f.setContent(html_d341fd93fbf43897c0c6ba9390681614);
+            
+        
+
+        marker_12c07c0f6db2c4047026878d948841c4.bindPopup(popup_ffae7fbf6b54827a0eec44478796f46f)
+        ;
+
+        
+    
+    
+            var marker_46649d9587ec135f95cf94d71932ead9 = L.marker(
+                [48.79673508795443, 2.3683342337608337],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_2d9dc1f3c5f1625552b114d3aeecf758 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_46649d9587ec135f95cf94d71932ead9.setIcon(icon_2d9dc1f3c5f1625552b114d3aeecf758);
+        
+    
+        var popup_c73039a1f582c2cec0d76e4d5310b55d = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_a970d91da5e909470b4bb11a6679ed04 = $(`<div id="html_a970d91da5e909470b4bb11a6679ed04" style="width: 100.0%; height: 100.0%;">Maxime Gorki - Paul Vaillant-Couturier</div>`)[0];
+                popup_c73039a1f582c2cec0d76e4d5310b55d.setContent(html_a970d91da5e909470b4bb11a6679ed04);
+            
+        
+
+        marker_46649d9587ec135f95cf94d71932ead9.bindPopup(popup_c73039a1f582c2cec0d76e4d5310b55d)
+        ;
+
+        
+    
+    
+            var marker_a79dc206cb3601a2f267e2f5ab9e4a0b = L.marker(
+                [48.881287375060616, 2.420119643211365],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_4d59ca8e558262feb2eef3df4ba0ee60 = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_a79dc206cb3601a2f267e2f5ab9e4a0b.setIcon(icon_4d59ca8e558262feb2eef3df4ba0ee60);
+        
+    
+        var popup_5ac763736b331ed8b1a9207600bed5c7 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_e3ba761923216006bc3870b2ca6c8822 = $(`<div id="html_e3ba761923216006bc3870b2ca6c8822" style="width: 100.0%; height: 100.0%;">Square du Théâtre du Garde-Chasse</div>`)[0];
+                popup_5ac763736b331ed8b1a9207600bed5c7.setContent(html_e3ba761923216006bc3870b2ca6c8822);
+            
+        
+
+        marker_a79dc206cb3601a2f267e2f5ab9e4a0b.bindPopup(popup_5ac763736b331ed8b1a9207600bed5c7)
+        ;
+
+        
+    
+    
+            var marker_f1027f2db3c809aaff8285a04c8fa5d0 = L.marker(
+                [48.87959698690176, 2.3887913337477067],
+                {}
+            ).addTo(marker_cluster_4798d7caed50211cf25a4d3a5241d4ae);
+        
+    
+            var icon_8fd47f710bf55ade67184988711f3ded = L.AwesomeMarkers.icon(
+                {"extraClasses": "fa-rotate-0", "icon": "bicycle", "iconColor": "white", "markerColor": "blue", "prefix": "fa"}
+            );
+            marker_f1027f2db3c809aaff8285a04c8fa5d0.setIcon(icon_8fd47f710bf55ade67184988711f3ded);
+        
+    
+        var popup_57fecab2cc31bcd490c06093fb6e0d59 = L.popup({"maxWidth": "100%"});
+
+        
+            
+                var html_1ae9a8910518ec8824dcea6670788885 = $(`<div id="html_1ae9a8910518ec8824dcea6670788885" style="width: 100.0%; height: 100.0%;">Botzaris - Crimée</div>`)[0];
+                popup_57fecab2cc31bcd490c06093fb6e0d59.setContent(html_1ae9a8910518ec8824dcea6670788885);
+            
+        
+
+        marker_f1027f2db3c809aaff8285a04c8fa5d0.bindPopup(popup_57fecab2cc31bcd490c06093fb6e0d59)
+        ;
+
+        
+    
+    
+            marker_cluster_4798d7caed50211cf25a4d3a5241d4ae.addTo(map_33fccdf7c0145ef4eb8aa8c42c3eb9f9);
+        
+</script>
+</html>

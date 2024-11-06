@@ -307,7 +307,8 @@ elif st.session_state.selection  == "💻 Cool Projects":
             "Hourly Availability",
             "Station Map",
             "Station Density Map",
-            "Bikes Availability Map"
+            "Bikes Availability Map",
+            "Ebike rate",
         ]
 
         selected_visualization = st.selectbox("Select a visualization:", visualization_options)
@@ -414,7 +415,21 @@ elif st.session_state.selection  == "💻 Cool Projects":
             It helps to understand how bike availability fluctuates over time and across locations, providing insights for 
             resource allocation and user behavior patterns.
             """)
-            
+
+        elif selected_visualization == "Ebike rate":
+            st.subheader("Ebike rate")
+            st.components.v1.html(open('proportion_ebike.html', 'r').read(), height=600)
+            with open('carte_top_10_ebike.html', 'r', encoding='utf-8') as f:
+                map_html = f.read()
+            st.subheader("Top 30 ebike stations")
+            st.components.v1.html(map_html, height=600)
+            st.subheader("Analysis")
+            st.write("""
+            This plot shows the number of stations in relation to the e-bike rate per station.
+
+            Electric Vélibs are clearly in high demand and short supply! Riders are far more likely to find a station stocked with traditional, mechanical Vélibs than with electric ones. This scarcity of e-bikes could contribute to frustration among users who prefer a quicker, less strenuous ride, especially during peak hours or for longer commutes. The distribution also suggests potential imbalances in the fleet's availability, which might be worth addressing to enhance user satisfaction and meet the growing preference for e-bikes            
+            """)
+                
                 
 
 
